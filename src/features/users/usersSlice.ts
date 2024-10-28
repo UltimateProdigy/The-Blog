@@ -8,19 +8,17 @@ interface Users {
 	}[];
 }
 
-const initialState: Users = {
-	users: [
-		{ id: 1, name: "Akinola Ayobami", userType: "Admin" },
-		{ id: 2, name: "Ifeloluwa", userType: "Customer" },
-	],
-};
+const initialState = [
+	{ id: 1, name: "Akinola Ayobami", userType: "Admin" },
+	{ id: 2, name: "Ifeloluwa", userType: "Customer" },
+];
 
 export const userSlice = createSlice({
-	name: "User",
+	name: "users",
 	initialState,
 	reducers: {},
 });
 
-export const selectAllUsers = (state: { users: Users }) => state.users;
+export const selectAllUsers = (state: Users) => state.users;
 
 export default userSlice.reducer;
